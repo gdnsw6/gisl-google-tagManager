@@ -162,7 +162,7 @@ class GeneralSubscriber implements EventSubscriberInterface
         $salesChannelId = $event->getSalesChannelContext()->getSalesChannel()->getId();
         $containerIds = $this->datalayerService->getContainerIds($salesChannelId);
         $tagManagerConfig = $this->datalayerService->getGtmConfig($salesChannelId);
-        if(!$containerIds && $tagManagerConfig['removeContainerCode'] === false) {
+        if(!$containerIds && @$tagManagerConfig['removeContainerCode'] === false) {
             $status = 'disabled';
         }
 
