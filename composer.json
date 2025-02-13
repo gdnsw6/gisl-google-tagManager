@@ -1,0 +1,27 @@
+{
+    "name": "gisl/google-tag-manager",
+    "description": "GISL Google Tag Manager for Shopware 6",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "^6.5"
+    },
+    "extra": {
+        "shopware-plugin-class": "GISL\\GoogleTagManager\\GISLGoogleTagManager",
+        "label": {
+            "de-DE": "GISL Google Tag Manager",
+            "en-GB": "GISL Google Tag Manager"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "GISL\\GoogleTagManager\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GISL\\GoogleTagManager\\Tests\\": "tests/"
+        }
+    }
+}
