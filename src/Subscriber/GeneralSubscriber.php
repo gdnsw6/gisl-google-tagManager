@@ -184,7 +184,7 @@ class GeneralSubscriber implements EventSubscriberInterface
         /**
          * Code insertion delay exception on finish pages - since 6.2.9
          */
-        $codeDelayActive = $tagManagerConfig['delayCodeInsertion'];
+        $codeDelayActive = @$tagManagerConfig['delayCodeInsertion'];
 
         switch (get_class($event)) {
             case ProductPageLoadedEvent::class:
